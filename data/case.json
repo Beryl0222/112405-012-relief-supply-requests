@@ -1,35 +1,134 @@
 {
+  "case_id": "case-relief-supply-requests",
   "records": [
     {
-      "id": "RS-2",
-      "lang": "en",
-      "text": "No bottled water needed yet; our purifier is working, but filters will run out tomorrow.",
-      "kind": "site-request"
+      "id": "RS-A",
+      "kind": "request",
+      "text": "North camp, 08:00: No bottled water needed today if four F2 cartridges arrive by noon. Our purifier takes F2 only."
     },
     {
-      "id": "RS-3",
-      "lang": "zh",
-      "text": "南坡点水快用完，现有库存约三箱，人数四十。",
-      "kind": "site-request"
+      "id": "RS-B",
+      "kind": "request",
+      "text": "南坡点八时盘点三箱水，四十人每人每日两瓶；先再送两箱，不是把总量凑到两箱。"
     },
     {
-      "id": "RS-4",
-      "lang": "zh",
-      "text": "志愿者转述：南坡可能还剩十箱，未现场核对。",
-      "kind": "forward"
+      "id": "RS-C",
+      "kind": "relay",
+      "text": "志愿者转述昨晚南坡有十箱，未在现场核对。"
+    },
+    {
+      "id": "RS-D",
+      "kind": "clarification",
+      "text": "北营点回复上一问：要两套滤芯，一套两个F2，不是两箱；中午前不到则需四箱饮水。"
+    },
+    {
+      "id": "RS-E",
+      "kind": "count",
+      "text": "南坡十时实盘，原三箱中一箱漏损，现有两箱完整水。"
+    },
+    {
+      "id": "RS-F",
+      "kind": "reservation",
+      "text": "九时已为南坡预留三箱水，未装车。"
+    },
+    {
+      "id": "RS-G",
+      "kind": "loading",
+      "text": "九时半T1实装北营四个F2、南坡两箱水，剩一格。"
+    },
+    {
+      "id": "RS-H",
+      "kind": "reroute",
+      "text": "北营通道十一时封闭，司机拟把滤芯先送东台；东台接受F2，北营未收到。"
+    },
+    {
+      "id": "RS-I",
+      "kind": "delivery",
+      "text": "东台签收四个F2；南坡只收到一箱水，另一箱在车上。"
+    },
+    {
+      "id": "RS-J",
+      "kind": "cancellation",
+      "text": "南坡回复刚才说的另一箱水不用再补，现有水源恢复；滤芯请求没有撤销。"
+    },
+    {
+      "id": "RS-K",
+      "kind": "request",
+      "text": "东台需一套泵滤设备；已有两个F2可作套内滤芯，泵缺一台。"
     }
   ],
-  "supplies": [
+  "objects": {
+    "sites": [
+      {
+        "id": "N",
+        "name": "北营",
+        "aliases": [
+          "North camp"
+        ]
+      },
+      {
+        "id": "S",
+        "name": "南坡"
+      },
+      {
+        "id": "E",
+        "name": "东台"
+      }
+    ],
+    "stock": [
+      {
+        "item": "water",
+        "qty": 12,
+        "unit": "箱"
+      },
+      {
+        "item": "F2",
+        "qty": 12,
+        "unit": "个"
+      },
+      {
+        "item": "F1",
+        "qty": 18,
+        "unit": "个"
+      },
+      {
+        "item": "pump",
+        "qty": 1,
+        "unit": "台"
+      }
+    ],
+    "vehicles": [
+      {
+        "id": "T1",
+        "capacity": 9,
+        "window": "09:30-12:00",
+        "sites": [
+          "N",
+          "S",
+          "E"
+        ]
+      },
+      {
+        "id": "T2",
+        "capacity": 4,
+        "window": "13:00-16:00",
+        "sites": [
+          "N",
+          "E"
+        ]
+      }
+    ]
+  },
+  "existing": [
     {
-      "id": "IT-1",
-      "name": "滤芯",
-      "pack": "每箱 6 个"
+      "id": "RES-S",
+      "state": "reserved",
+      "source": "RS-F"
     },
     {
-      "id": "IT-2",
-      "name": "瓶装水",
-      "pack": "每箱 24 瓶"
+      "id": "LOAD-T1",
+      "state": "loaded",
+      "source": "RS-G"
     }
-  ],
-  "case_id": "relief-2"
+  ]
 }
