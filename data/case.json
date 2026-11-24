@@ -1,0 +1,35 @@
+{
+  "records": [
+    {
+      "id": "RS-2",
+      "lang": "en",
+      "text": "No bottled water needed yet; our purifier is working, but filters will run out tomorrow.",
+      "kind": "site-request"
+    },
+    {
+      "id": "RS-3",
+      "lang": "zh",
+      "text": "南坡点水快用完，现有库存约三箱，人数四十。",
+      "kind": "site-request"
+    },
+    {
+      "id": "RS-4",
+      "lang": "zh",
+      "text": "志愿者转述：南坡可能还剩十箱，未现场核对。",
+      "kind": "forward"
+    }
+  ],
+  "supplies": [
+    {
+      "id": "IT-1",
+      "name": "滤芯",
+      "pack": "每箱 6 个"
+    },
+    {
+      "id": "IT-2",
+      "name": "瓶装水",
+      "pack": "每箱 24 瓶"
+    }
+  ],
+  "case_id": "relief-2"
+}
